@@ -3,7 +3,9 @@ import { BrowserRouter } from 'react-router-dom';
 import Login from '../Login';
 import { useAuth } from '../../hooks/useAuth';
 
-jest.mock('../../hooks/useAuth');
+jest.mock('../../hooks/useAuth', () => ({
+    useAuth: jest.fn(),
+}));
 
 const MockedLogin = () => (
   <BrowserRouter>
