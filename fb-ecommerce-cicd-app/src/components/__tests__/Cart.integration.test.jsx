@@ -39,6 +39,7 @@ describe('Cart Integration Tests', () => {
         });
         orderService.createOrder.mockResolvedValue('order123');
         jest.clearAllMocks();
+        window.alert.mockClear();
     });
 
     // test: displays cart items with correct calculations
@@ -140,9 +141,10 @@ describe('Cart Integration Tests', () => {
     })
 
     test('renders empty cart message when no items', ()  => {
-        render(<Cart cartItems={mockCartItems} clearCart={mockClearCart} />);
+        render(<Cart cartItems={[]} clearCart={mockClearCart} />);
 
         expect(screen.getByText('Total: $0.00')).toBeInTheDocument();
         expect(screen.getByText('Place Order')).toBeInTheDocument();
+        expect(screen.getByText('Shopping Cart')).toBeInTheDocument();
     });
 });
