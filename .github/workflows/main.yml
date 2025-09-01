@@ -76,7 +76,7 @@ jobs:
       with:
         node-version: '20.x'
         cache: 'npm'
-        cache-dependency-path: firebase-ecommerce-app/package-lock.json
+        cache-dependency-path: FirebaseEcommerce_CI-CD_Integration\fb-ecommerce-cicd-app\package.json
     
     - name: Install dependencies
       run: |
