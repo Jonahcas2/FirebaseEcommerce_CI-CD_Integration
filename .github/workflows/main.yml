@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: firebase-ecommerce-app/package-lock.json
+        cache-dependency-path: firebase-ecommerce-app/fb-ecommerce-cicd-app/package-lock.json
     
     - name: Change to app directory
       run: cd firebase-ecommerce-app
